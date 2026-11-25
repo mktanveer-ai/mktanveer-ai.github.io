@@ -1,0 +1,380 @@
+
+/* General Settings */
+
+:root {
+    --primary: #7566c9;
+    --primary-dark: #5d4bb3;
+    --text: #29263b;
+    --text-light: #77738a;
+    --background: #ffffff;
+    --light: #f5f3fc;
+    --shadow: 0 4px 15px rgba(40, 30, 90, 0.10);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--background);
+}
+
+/* Navigation */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: var(--shadow);
+    z-index: 1000;
+    padding: 16px 0;
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* Home Section */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 130px 10% 80px;
+    background: var(--light);
+    gap: 40px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.welcome {
+    color: var(--primary);
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.highlight {
+    color: var(--primary);
+}
+
+.tagline {
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.intro {
+    color: var(--text-light);
+    margin-bottom: 25px;
+}
+
+.profile-placeholder {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #7566c9, #b5a9ed);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 100px;
+    font-weight: 700;
+    box-shadow: var(--shadow);
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+.btn-secondary {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+/* General Sections */
+
+section {
+    padding: 90px 10%;
+    scroll-margin-top: 75px;
+}
+
+.section-title {
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 45px;
+    color: var(--text);
+}
+
+/* About Section */
+
+.about {
+    background: white;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text p {
+    margin-bottom: 18px;
+    color: var(--text-light);
+}
+
+.about-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-item {
+    background: var(--light);
+    padding: 18px;
+    border-radius: 12px;
+}
+
+.info-item i {
+    color: var(--primary);
+    margin-right: 12px;
+}
+
+/* Skills Section */
+
+.skills {
+    background: var(--light);
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.skill-category {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.skill-category h3 {
+    margin-bottom: 20px;
+}
+
+.skill-category h3 i {
+    color: var(--primary);
+}
+
+.skill-tag {
+    display: inline-block;
+    background: var(--light);
+    padding: 8px 15px;
+    border-radius: 25px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+.small-note {
+    color: var(--text-light);
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+/* Projects Section */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+.project-icon {
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--light);
+    color: var(--primary);
+    font-size: 50px;
+}
+
+.project-info {
+    padding: 25px;
+}
+
+.project-info h3 {
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+.project-tech span {
+    display: inline-block;
+    background: var(--light);
+    color: var(--primary-dark);
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin: 12px 5px 0 0;
+    font-size: 12px;
+}
+
+/* Contact Section */
+
+.contact {
+    background: var(--light);
+    text-align: center;
+}
+
+.contact-content p {
+    margin-bottom: 25px;
+}
+
+.contact-methods {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-methods a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.contact-methods i {
+    margin-right: 6px;
+}
+
+/* Footer */
+
+.footer {
+    background: #29263b;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Mobile Responsive Design */
+
+@media (max-width: 768px) {
+
+    .nav-content {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-links {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 13px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 150px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .profile-placeholder {
+        width: 200px;
+        height: 200px;
+        font-size: 75px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 70px 7%;
+    }
+}
